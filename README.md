@@ -1,11 +1,4 @@
-# Analytics Edge Ecosystem Workloads Project
-
-## Abstract
-Edge Computing has become immensely beneficial for running analytics at the edge, thereby reducing the amount of data sent to servers and storage at the core or cloud, which in turn increases latency. The Analytics Edge Ecosystem Workloads project aims to bring about a digital transformation strategy by focusing on cloud-native containerization to improve business analytics.
-
-In this project, AI/ML and Generative AI (GenAI) workloads will be developed to address the challenges faced in the healthcare/medical industry. The development of this project includes the open-source deployment of AI/ML and GenAI workloads as well as deployments on Kubernetes using Rancher by SUSE, with openSUSE Leap as the base layer operating system. Additionally, K3s will be utilized as a lightweight Kubernetes designed for the Edge.
-
-The project implementation will involve several tech stacks such as DataOps to manage data pipelines, MLOps, and LLMOps to manage ML and LLM pipelines, as well as Platform Engineering and ITOps to manage platforms.
+# Code4Cause Project ([view](https://medsmart.streamlit.app/))
 
 ## Problem Statement
 **Vertical: Medical/Healthcare**
@@ -77,8 +70,7 @@ steamlit run app.py
 
 ## Acknowledgments
 - Thanks to the open-source community for providing various tools and frameworks.
-- Special thanks to UCIML, Kaggle, and other trusted sources for providing the datasets.
-- Gratitude to SUSE, openSUSE Leap, and Rancher for their powerful tools enabling Kubernetes deployments.
+- Special thanks to UCIML, FDA, and other trusted sources for providing the datasets.
 
 ## Future Work
 The project aims to continually improve and expand its features. Future work includes:
@@ -101,14 +93,8 @@ The project aims to continually improve and expand its features. Future work inc
 - Deployment on Kubernetes using Rancher and K3s
 - Development of LLMOps pipelines
 
-### [1.0.0] - YYYY-MM-DD
-- Initial release
-
-## Authors
-- [Aman Kumar](https://github.com/Aman123lug) - Initial work
-
 ## Support
-If you need support, please open an issue on the [GitHub repository](https://github.com/yourusername/analytics-edge-ecosystem/issues).
+If you need support, please open an issue
 
 ---
 
