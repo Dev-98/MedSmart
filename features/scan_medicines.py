@@ -5,7 +5,7 @@ from string import punctuation, digits
 import google.generativeai as genai
 from Pine_Process import get_context_new
 from dotenv import load_dotenv
-
+import numpy as np
 
 load_dotenv()
 
@@ -13,7 +13,7 @@ load_dotenv()
 st.title("Capture Medicine")
 
 def get_llm_response(context:str) -> str :
-    input = f""" Your are MedSathi a helpful pharmacist. Use the given context to get the knowledge of the medicine and provide as much information possible about the medicine using the context. You're job is sort of like summarizing and provide all the info.
+    input = f""" Your are MedSmart a helpful pharmacist. Use the given context to get the knowledge of the medicine and provide as much information possible about the medicine using the context. You're job is sort of like summarizing and provide all the info.
     context:{context}."""
     
     try:
@@ -29,17 +29,16 @@ picture = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png"])
 
 if picture:
     st.image(picture)
-
-    path = Image.open("features/sample_images_scan/crotamiton-hydrocortisone-cream.jpeg")
+    path = Image.open(picture)
+    img = np.array(path)
+    
     reader = easyocr.Reader(['en'])
-
-    results = reader.readtext(path)
+    results = reader.readtext(img)
 
     text = ' ' 
     for result in results:
         text += result[1] + ' '
-        
-    # print("old :", text)
+
     
     remove_digits = str.maketrans('', '', punctuation)
     remove_digits2 = str.maketrans('', '', digits)
@@ -96,4 +95,3 @@ if image_file is not None:
     output = get_llm_response(context)
     with st.chat_message("assistant"):
         st.markdown(output)
-        

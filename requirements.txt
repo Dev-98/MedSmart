@@ -6,6 +6,7 @@ pinecone-client
 pytesseract
 langchain
 groq
+gtts
 lightrag
 langchain-community
 google-ai-generativelanguage==0.6.5
